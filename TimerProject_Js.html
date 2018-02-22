@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+  <title>Break Time!</title>
+</head>
+<body>
+
+<div class="heading">
+  <h1> Break Time! </h1>
+  <p> Enter the length of your break in minutes. The timer will keep track! </p>
+  <div class="clock">
+    <form><input type="text" class="countdown" placeholder="Your break time here!"></input></form>
+  </div>
+  <div class="timer">
+  </div>
+</div>
+
+<style>
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .heading {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    height: calc(100% - 30px);
+  }
+
+  input {
+    border: 2px solid darkgreen;
+    min-width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+  }
+
+  .timer {
+    margin-top: 150px;
+    font-size: 5em;
+  }
+
+</style>
+
+<!--  A break Timer that includes
+
+input for number of minutes break is
+labels for quick access breaks - "Lunch", "20 mins", "Morning Break (15)"
+Easily visible countdown timer
+Be back calculation ex "Be back at 10:20am"
+Yellow background 1 minute warning
+Red background when time is up
+Ability to "add a minute"-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+  $(function() {
+
+
+      // var clock =  setInterval(function() {
+
+
+          $('form').on('submit', function(variable) {
+                     variable.preventDefault();
+
+                     var time =  $('input').val();
+
+                     var counter = $('.timer').text(time);
+          });
+              //
+              //       counter = counter -1;
+              //
+              //       console.log(counter);
+              //
+              //
+              //
+              //       if (counter < 0) {
+              //         clearInterval(clock);
+              //       }
+              //
+              //
+              //
+              // }, 1000);
+        //
+
+
+
+
+        // counter.clearInterval(clock);
+
+
+
+
+      });
+
+</script>
+
+</body>
+</html>
