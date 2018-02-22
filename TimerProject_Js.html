@@ -65,36 +65,37 @@ Ability to "add a minute"-->
   $(function() {
 
 
-      // var clock =  setInterval(function() {
 
-
-          $('form').on('submit', function(variable) {
+       $('form').on('submit', function(variable) {
                      variable.preventDefault();
 
-                     var time =  $('input').val();
-
-                     var counter = $('.timer').text(time);
-          });
-              //
-              //       counter = counter -1;
-              //
-              //       console.log(counter);
-              //
-              //
-              //
-              //       if (counter < 0) {
-              //         clearInterval(clock);
-              //       }
-              //
-              //
-              //
-              // }, 1000);
-        //
+                      var time =  $('input').val();
 
 
+                    var clock = window.setInterval(function() {
+
+                           time = time - 1;
+
+                           $('.timer').html(time);
 
 
-        // counter.clearInterval(clock);
+                     if (time === 1) {
+                       $('body').css('background', 'yellow');
+                     }
+
+                     if (time === 0) {
+                       $('body').css('background', 'red');
+                       window.clearInterval(clock)
+                     }
+
+                   }, 1000);
+
+
+                });
+
+
+
+
 
 
 
