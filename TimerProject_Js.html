@@ -9,15 +9,30 @@
 </head>
 <body>
 
-<div class="heading">
-  <h1> Break Time! </h1>
-  <p> Enter the length of your break in minutes. The timer will keep track! </p>
-  <div class="clock">
-    <form><input type="text" class="countdown" placeholder="Your break time here!"></input></form>
+
+<header>
+
+  <div class="heading">
+    <h1> Break Time! </h1>
+    <section class="box">
+        <p> Choose from one of the options. The timer will keep track of your break! </p>
+        <ul>
+          <li id="coffee">Coffee Break - 15 mins</li>
+          <li id="lunch">Lunch - 1 hour</li>
+          <li id="catnap">Catnap - 10 mins</li>
+          <div class="clock">
+            <form><input type="text" class="number" placeholder="Your break time here!"></input></form>
+          </div>
+        </ul>
+      </section>
   </div>
+
   <div class="timer">
   </div>
-</div>
+
+
+
+</header>
 
 <style>
 
@@ -25,12 +40,13 @@
     font-family: 'Josefin Sans', sans-serif;
   }
 
-  .heading {
-    max-width: 900px;
+  header {
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
-    height: calc(100% - 30px);
+    height: 100vh;
+
   }
+
 
   input {
     border: 2px solid darkgreen;
@@ -41,10 +57,54 @@
     line-height: 100px;
   }
 
+  ul li {
+    list-style-type: none;
+    margin: 15px 0 15px 0;
+    border: 1px solid black;
+    padding: 5px;
+    min-height: 50px;
+    line-height: 50px;
+
+  }
+
+
+
+  .heading {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
   .timer {
     margin-top: 150px;
     font-size: 5em;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
   }
+
+  .box {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+
+  }
+
+  ul, p {
+    width: calc(100% - 50px);
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+
+
+
+
+
 
 </style>
 
@@ -71,12 +131,15 @@ Ability to "add a minute"-->
 
                       var time =  $('input').val();
 
+                      $('.timer').html(time);
+
+                      $('input').val(" ");
 
                     var clock = window.setInterval(function() {
 
                            time = time - 1;
 
-                           $('.timer').html(time);
+                      $('.timer').html(time);
 
 
                      if (time === 1) {
@@ -88,19 +151,19 @@ Ability to "add a minute"-->
                        window.clearInterval(clock)
                      }
 
-                   }, 1000);
+                   }, 60000);
+
+
+
+
+                 });
+
+
+
+
 
 
                 });
-
-
-
-
-
-
-
-
-      });
 
 </script>
 
