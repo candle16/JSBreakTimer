@@ -38,9 +38,7 @@
 
 
 </header>
-<!-- <footer>
-  <div> Kate S     |     February 2018 </div>
-</footer> -->
+
 
 <style>
 
@@ -137,35 +135,13 @@
 
   }
 
-  footer div {
-    font-family: 'Source Serif Pro', serif;
-    font-size: 0.5em;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    position:absolute;
-    bottom:0;
-  }
+
 
 
   /* 940px-768px - Portrait tablet and small desktops */
   @media (max-width: 940px) {
 
 
-    footer div {
-      font-family: 'Source Serif Pro', serif;
-      font-size: 0.5em;
-      width: 100%;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      position:absolute;
-      bottom:0;
-    }
-
-  }
 
   /* 768px - 480px landscape phones and small tablets*/
   @media (max-width: 768px) {
@@ -396,6 +372,18 @@ Ability to "add a minute"-->
   $(function() {
 
 
+          $('#coffee').on('click', function(){
+                $('input').val(15);
+          });
+
+          $('#lunch').on('click', function(){
+                $('input').val(60);
+          });
+
+          $('#catnap').on('click', function(){
+                $('input').val(10);
+          });
+
 
        $('form').on('submit', function(variable) {
                      variable.preventDefault();
@@ -404,7 +392,9 @@ Ability to "add a minute"-->
 
                       $('.timer').html(time);
 
-                      $('input').val("Watch the clock!");
+                      $('input').val(" ");
+
+
 
                     var clock = window.setInterval(function() {
 
@@ -413,12 +403,13 @@ Ability to "add a minute"-->
                       $('.timer').html(time);
 
 
+
                      if (time === 1) {
-                       $('body').css('background', 'yellow');
+                       $('h1').text('1 minute left!');
                      }
 
                      if (time === 0) {
-                       $('body').css('background', 'red');
+                       $('h1').text('Break time over!');
                        window.clearInterval(clock)
                      }
 
