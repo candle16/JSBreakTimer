@@ -4,103 +4,374 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
   <title>Break Time!</title>
 </head>
 <body>
 
 
 <header>
+  <section class="wrapper">
 
-  <div class="heading">
-    <h1> Break Time! </h1>
-    <section class="box">
-        <p> Choose from one of the options. The timer will keep track of your break! </p>
-        <ul>
-          <li id="coffee">Coffee Break - 15 mins</li>
-          <li id="lunch">Lunch - 1 hour</li>
-          <li id="catnap">Catnap - 10 mins</li>
-          <div class="clock">
-            <form><input type="text" class="number" placeholder="Your break time here!"></input></form>
-          </div>
-        </ul>
-      </section>
-  </div>
+    <div class="heading">
+      <h1> Break Time! </h1>
+      <section class="box">
+          <p> Choose one of these options to create your timer! </p>
+          <ul>
+            <li id="coffee">Coffee Break - 15 mins</li>
+            <li id="lunch">Lunch - 1 hour</li>
+            <li id="catnap">Catnap - 10 mins</li>
+            <div class="clock">
+              <form><input type="text" class="number" placeholder="Enter number of minutes"></input></form>
+            </div>
+          </ul>
+        </section>
+    </div>
 
-  <div class="timer">
-  </div>
+    <div class="timer">
+    </div>
 
+  </section>
 
 
 </header>
+<!-- <footer>
+  <div> Kate S     |     February 2018 </div>
+</footer> -->
 
 <style>
 
   body {
-    font-family: 'Josefin Sans', sans-serif;
+    background-color: #E9F1F7;
   }
 
   header {
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    /* height: 100vh; */
 
   }
 
-
-  input {
-    border: 2px solid darkgreen;
-    min-width: 100px;
-    height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 100px;
+  h1 {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 3em;
+      margin-top: 50px;
+      letter-spacing: 1px;
   }
 
-  ul li {
+    ul, p {
+      width: calc(100% - 50px);
+    }
+
+      ul {
+          text-transform: uppercase;
+
+      }
+
+  .number, ul li {
     list-style-type: none;
     margin: 15px 0 15px 0;
-    border: 1px solid black;
+    border: 3px solid #2274A5;
     padding: 5px;
     min-height: 50px;
     line-height: 50px;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: white;
 
   }
 
+  ul li {
+    box-shadow: 2px 4px;
+    cursor: pointer;
+  }
+
+  .number {
+    width: 94%;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+  }
 
 
   .heading {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
 
   }
 
   .timer {
-    margin-top: 150px;
-    font-size: 5em;
-    min-width: 300px;
+    font-size: 8em;
+    width: 50%;
     margin: 0 auto;
+    margin-bottom: 50px;
     text-align: center;
+    font-family: 'Source Code Pro', monospace;
 
   }
 
   .box {
     display: flex;
     justify-content: space-around;
+    align-items:center;
     margin: 0 auto;
-
+    font-family: 'Source Code Pro', monospace;
   }
 
-  ul, p {
-    width: calc(100% - 50px);
-  }
-
-  p {
+  .box p {
     font-size: 2em;
+    font-family: 'Source Serif Pro', serif;
+    height: calc(100% - 20px);
+  }
+
+  .wrapper {
+      border: 10px solid #2274A5;
+      width: 60%;
+      /* height: calc(100% - 50px); */
+      margin: 0 auto;
+
+  }
+
+  footer div {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 0.5em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position:absolute;
+    bottom:0;
   }
 
 
+  /* 940px-768px - Portrait tablet and small desktops */
+  @media (max-width: 940px) {
+
+
+    footer div {
+      font-family: 'Source Serif Pro', serif;
+      font-size: 0.5em;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      position:absolute;
+      bottom:0;
+    }
+
+  }
+
+  /* 768px - 480px landscape phones and small tablets*/
+  @media (max-width: 768px) {
+
+    body {
+      background-color: #E9F1F7;
+      border: 5px solid #2274A5;
+    }
+
+    header {
+      width: 100%;
+      margin: 0 auto;
+
+
+    }
+
+    h1 {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 3em;
+        margin-top: 50px;
+        letter-spacing: 1px;
+    }
+
+      ul, p {
+        width: 100%;
+      }
+
+        ul {
+            text-transform: uppercase;
+            padding-left: 0;
+
+        }
+
+    .number, ul li {
+      list-style-type: none;
+      margin: 15px 0 15px 0;
+      border: 3px solid #2274A5;
+      padding: 5px;
+      min-height: 50px;
+      line-height: 50px;
+      font-size: 0.8em;
+      font-weight: bold;
+      background-color: white;
+
+    }
+/*768 to 480px*/
+
+    ul li {
+      box-shadow: 2px 4px;
+      cursor: pointer;
+    }
+
+    .number {
+      width: 94%;
+      text-align: center;
+      margin-top: 0;
+      font-family: 'Source Code Pro', monospace;
+      text-transform: uppercase;
+    }
+
+
+    .heading {
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;
+
+    }
+
+    .timer {
+      font-size: 8em;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      text-align: center;
+      font-family: 'Source Code Pro', monospace;
+
+    }
+
+/* <!--768 to 480--> */
+
+    .box {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    .box p {
+      font-size: 2em;
+      font-family: 'Source Serif Pro', serif;
+      height: calc(100% - 20px);
+    }
+
+    .wrapper {
+      border: 0px;
+
+
+    }
+
+    footer div {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+  /* 480px and smaller - smartphones and down */
+  @media (max-width: 480px) {
+
+
+      body {
+        background-color: #E9F1F7;
+        border: 5px solid #2274A5;
+      }
+
+      header {
+        width: 100%;
+        margin: 0 auto;
+
+
+      }
+
+      h1 {
+          font-family: 'Source Code Pro', monospace;
+          font-size: 3em;
+          margin-top: 50px;
+          letter-spacing: 1px;
+      }
+
+        ul, p {
+          width: 100%;
+        }
+
+          ul {
+              text-transform: uppercase;
+              padding-left: 0;
+
+          }
+
+      .number, ul li {
+        list-style-type: none;
+        margin: 15px 0 15px 0;
+        border: 3px solid #2274A5;
+        padding: 5px;
+        min-height: 50px;
+        line-height: 50px;
+        font-size: 0.8em;
+        font-weight: bold;
+        background-color: white;
+
+      }
+/*480px on down */
+
+      ul li {
+        box-shadow: 2px 4px;
+        cursor: pointer;
+      }
+
+      .number {
+        width: 94%;
+        text-align: center;
+        margin-top: 0;
+        font-family: 'Source Code Pro', monospace;
+        text-transform: uppercase;
+      }
+
+
+      .heading {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+
+      }
+
+      .timer {
+        font-size: 8em;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Source Code Pro', monospace;
+
+      }
+
+/* <!--480px and down--> */
+
+      .box {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Source Code Pro', monospace;
+      }
+
+      .box p {
+        font-size: 2em;
+        font-family: 'Source Serif Pro', serif;
+        height: calc(100% - 20px);
+      }
+
+      .wrapper {
+        border: 0px;
+
+
+      }
+  }
 
 
 
@@ -133,7 +404,7 @@ Ability to "add a minute"-->
 
                       $('.timer').html(time);
 
-                      $('input').val(" ");
+                      $('input').val("Watch the clock!");
 
                     var clock = window.setInterval(function() {
 
