@@ -372,13 +372,38 @@ Ability to "add a minute"-->
   $(function() {
 
 
-          $('#coffee').on('click', function(){
-                $('input').val(15);
+          $('#coffee').on('click', function() {
+
+                var timeCoffee = 15;
+                $('.timer').html(timeCoffee);
+
+                var clockCoffee = window.setInterval(function() {
+
+                       timeCoffee = timeCoffee - 1;
+
+                  $('.timer').html(timeCoffee);
+
+
+
+                 if (timeCoffee === 1) {
+                   $('h1').text('1 minute left!');
+                 }
+
+                 if (timeCoffee === 0) {
+                   $('h1').text('Break time over!');
+                   window.clearInterval(clockCoffee);
+                 }
+
+               }, 1000);
+
+
           });
+
 
           $('#lunch').on('click', function(){
                 $('input').val(60);
           });
+
 
           $('#catnap').on('click', function(){
                 $('input').val(10);
@@ -413,7 +438,7 @@ Ability to "add a minute"-->
                        window.clearInterval(clock)
                      }
 
-                   }, 60000);
+                   }, 1000);
 
 
 
