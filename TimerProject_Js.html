@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
   <title>Break Time!</title>
 </head>
@@ -17,21 +18,26 @@
   <section class="wrapper">
 
     <div class="heading">
-      <h1> Break Time! </h1>
+      <h1> Pause to breathe! </h1>
       <section class="box">
-          <p> Choose one of these options to create your timer! </p>
+          <p> Choose an option and relax. </p>
           <ul>
-            <li id="coffee">Coffee Break - 15 mins</li>
-            <li id="lunch">Lunch - 1 hour</li>
-            <li id="catnap">Catnap - 10 mins</li>
+            <li id="coffee">Quick reset: 15 sec</li>
+            <li id="lunch"> Recharge: 30 sec </li>
+            <li id="catnap">Deeper reset: 1 min</li>
             <div class="clock">
-              <form><input type="text" class="number" placeholder="Enter number of minutes"></input></form>
+              <form><input type="text" class="number" placeholder="How many seconds?"></input></form>
             </div>
           </ul>
         </section>
     </div>
 
-    <div class="timer">
+    <div class="timerBox">
+      <div class="timer">
+      </div>
+      <div class="mins">
+        <p> Minutes left</p>
+      </div>
     </div>
 
   </section>
@@ -39,331 +45,6 @@
 
 </header>
 
-
-<style>
-
-  body {
-    background-color: #E9F1F7;
-  }
-
-  header {
-    width: 100%;
-    margin: 0 auto;
-    /* height: 100vh; */
-
-  }
-
-  h1 {
-      font-family: 'Source Code Pro', monospace;
-      font-size: 3em;
-      margin-top: 50px;
-      letter-spacing: 1px;
-  }
-
-    ul, p {
-      width: calc(100% - 50px);
-    }
-
-      ul {
-          text-transform: uppercase;
-
-      }
-
-  .number, ul li {
-    list-style-type: none;
-    margin: 15px 0 15px 0;
-    border: 3px solid #2274A5;
-    padding: 5px;
-    min-height: 50px;
-    line-height: 50px;
-    font-size: 0.8em;
-    font-weight: bold;
-    background-color: white;
-
-  }
-
-  ul li {
-    box-shadow: 2px 4px;
-    cursor: pointer;
-  }
-
-  .number {
-    width: 94%;
-    text-align: center;
-    margin-top: 0;
-    font-family: 'Source Code Pro', monospace;
-    text-transform: uppercase;
-  }
-
-
-  .heading {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-
-  }
-
-  .timer {
-    font-size: 8em;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: 'Source Code Pro', monospace;
-
-  }
-
-  .box {
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    margin: 0 auto;
-    font-family: 'Source Code Pro', monospace;
-  }
-
-  .box p {
-    font-size: 2em;
-    font-family: 'Source Serif Pro', serif;
-    height: calc(100% - 20px);
-  }
-
-  .wrapper {
-      border: 10px solid #2274A5;
-      width: 60%;
-      /* height: calc(100% - 50px); */
-      margin: 0 auto;
-
-  }
-
-
-
-
-  /* 940px-768px - Portrait tablet and small desktops */
-  @media (max-width: 940px) {
-
-
-
-  /* 768px - 480px landscape phones and small tablets*/
-  @media (max-width: 768px) {
-
-    body {
-      background-color: #E9F1F7;
-      border: 5px solid #2274A5;
-    }
-
-    header {
-      width: 100%;
-      margin: 0 auto;
-
-
-    }
-
-    h1 {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 3em;
-        margin-top: 50px;
-        letter-spacing: 1px;
-    }
-
-      ul, p {
-        width: 100%;
-      }
-
-        ul {
-            text-transform: uppercase;
-            padding-left: 0;
-
-        }
-
-    .number, ul li {
-      list-style-type: none;
-      margin: 15px 0 15px 0;
-      border: 3px solid #2274A5;
-      padding: 5px;
-      min-height: 50px;
-      line-height: 50px;
-      font-size: 0.8em;
-      font-weight: bold;
-      background-color: white;
-
-    }
-/*768 to 480px*/
-
-    ul li {
-      box-shadow: 2px 4px;
-      cursor: pointer;
-    }
-
-    .number {
-      width: 94%;
-      text-align: center;
-      margin-top: 0;
-      font-family: 'Source Code Pro', monospace;
-      text-transform: uppercase;
-    }
-
-
-    .heading {
-      width: 95%;
-      margin: 0 auto;
-      text-align: center;
-
-    }
-
-    .timer {
-      font-size: 8em;
-      width: 50%;
-      margin: 0 auto;
-      margin-bottom: 50px;
-      text-align: center;
-      font-family: 'Source Code Pro', monospace;
-
-    }
-
-/* <!--768 to 480--> */
-
-    .box {
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-      font-family: 'Source Code Pro', monospace;
-    }
-
-    .box p {
-      font-size: 2em;
-      font-family: 'Source Serif Pro', serif;
-      height: calc(100% - 20px);
-    }
-
-    .wrapper {
-      border: 0px;
-
-
-    }
-
-    footer div {
-        margin-top: 20px;
-    }
-}
-
-
-
-
-  /* 480px and smaller - smartphones and down */
-  @media (max-width: 480px) {
-
-
-      body {
-        background-color: #E9F1F7;
-        border: 5px solid #2274A5;
-      }
-
-      header {
-        width: 100%;
-        margin: 0 auto;
-
-
-      }
-
-      h1 {
-          font-family: 'Source Code Pro', monospace;
-          font-size: 3em;
-          margin-top: 50px;
-          letter-spacing: 1px;
-      }
-
-        ul, p {
-          width: 100%;
-        }
-
-          ul {
-              text-transform: uppercase;
-              padding-left: 0;
-
-          }
-
-      .number, ul li {
-        list-style-type: none;
-        margin: 15px 0 15px 0;
-        border: 3px solid #2274A5;
-        padding: 5px;
-        min-height: 50px;
-        line-height: 50px;
-        font-size: 0.8em;
-        font-weight: bold;
-        background-color: white;
-
-      }
-/*480px on down */
-
-      ul li {
-        box-shadow: 2px 4px;
-        cursor: pointer;
-      }
-
-      .number {
-        width: 94%;
-        text-align: center;
-        margin-top: 0;
-        font-family: 'Source Code Pro', monospace;
-        text-transform: uppercase;
-      }
-
-
-      .heading {
-        width: 95%;
-        margin: 0 auto;
-        text-align: center;
-
-      }
-
-      .timer {
-        font-size: 8em;
-        width: 50%;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        text-align: center;
-        font-family: 'Source Code Pro', monospace;
-
-      }
-
-/* <!--480px and down--> */
-
-      .box {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-        font-family: 'Source Code Pro', monospace;
-      }
-
-      .box p {
-        font-size: 2em;
-        font-family: 'Source Serif Pro', serif;
-        height: calc(100% - 20px);
-      }
-
-      .wrapper {
-        border: 0px;
-
-
-      }
-  }
-
-
-
-
-
-</style>
-
-<!--  A break Timer that includes
-
-input for number of minutes break is
-labels for quick access breaks - "Lunch", "20 mins", "Morning Break (15)"
-Easily visible countdown timer
-Be back calculation ex "Be back at 10:20am"
-Yellow background 1 minute warning
-Red background when time is up
-Ability to "add a minute"-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -385,13 +66,19 @@ Ability to "add a minute"-->
 
 
 
-                 if (timeCoffee === 1) {
-                   $('h1').text('1 minute left!');
+                 if (timeCoffee === 5) {
+                   $('h1').text('5 seconds left!');
                  }
 
                  if (timeCoffee === 0) {
-                   $('h1').text('Break time over!');
+                   $('h1').text('Break time over!').css('color', '#CC4BC2');
+                   $('.timer').css('color', '#CC4BC2');
                    window.clearInterval(clockCoffee);
+
+                   setTimeout(function() {
+                      $('h1').text('Pause to breathe!').css('color', 'black');
+                      $('.timer').html(" ").css('color', 'black');
+                  },5000);
                  }
 
                }, 1000);
@@ -401,12 +88,69 @@ Ability to "add a minute"-->
 
 
           $('#lunch').on('click', function(){
-                $('input').val(60);
+
+                var timeLunch = 30;
+                $('.timer').html(timeLunch);
+
+                var clockLunch = window.setInterval(function() {
+
+                       timeLunch = timeLunch - 1;
+
+                  $('.timer').html(timeLunch);
+
+
+
+                 if (timeLunch === 5) {
+                   $('h1').text('5 seconds left!');
+                 }
+
+                 if (timeLunch === 0) {
+                   $('h1').text('Break time over!').css('color', '#CC4BC2');
+                   $('.timer').css('color', '#CC4BC2');
+                   window.clearInterval(clockLunch);
+
+                   setTimeout(function() {
+                      $('h1').text('Pause to breathe!').css('color', 'black');
+                      $('.timer').html(" ").css('color', 'black');
+                  },5000);
+
+                 }
+
+               }, 1000);
           });
 
 
           $('#catnap').on('click', function(){
-                $('input').val(10);
+
+            var timeCatnap = 60;
+            $('.timer').html(timeCatnap);
+
+            var clockCatnap = window.setInterval(function() {
+
+                   timeCatnap = timeCatnap - 1;
+
+              $('.timer').html(timeCatnap);
+
+
+
+             if (timeCatnap === 5) {
+               $('h1').text('5 seconds left!');
+             }
+
+             if (timeCatnap === 0) {
+               $('h1').text('Break time over!').css('color', '#CC4BC2');
+               $('.timer').css('color', '#CC4BC2');
+               window.clearInterval(clockCatnap);
+
+               setTimeout(function() {
+                  $('h1').text('Pause to breathe!').css('color', 'black');
+                  $('.timer').html(" ").css('color', 'black');
+              },5000);
+
+             }
+
+           }, 1000);
+
           });
 
 
@@ -429,21 +173,30 @@ Ability to "add a minute"-->
 
 
 
-                     if (time === 1) {
-                       $('h1').text('1 minute left!');
+                     if (time === 5) {
+                       $('h1').text('5 seconds left!');
                      }
 
                      if (time === 0) {
-                       $('h1').text('Break time over!');
+                       $('h1').text('Break time over!').css('color', '#CC4BC2');
+                       $('.timer').css('color', '#CC4BC2');
                        window.clearInterval(clock)
-                     }
 
-                   }, 1000);
+                       setTimeout(function() {
+                          $('h1').text('Pause to breathe!').css('color', 'black');
+                          $('.timer').html(" ").css('color', 'black');
+                      },5000);
+
+                    }
+
+
+
+              }, 1000);
 
 
 
 
-                 });
+          });
 
 
 
