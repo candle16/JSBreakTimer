@@ -4,7 +4,7 @@
 
 
 
-
+/* 940 and up - desktops */
 
   body {
     background-color: #E9F1F7;
@@ -116,11 +116,6 @@
   /* 940px-768px - Portrait tablet and small desktops */
   @media (max-width: 940px) {
 
-
-
-  /* 768px - 480px landscape phones and small tablets*/
-  @media (max-width: 768px) {
-
     body {
       background-color: #E9F1F7;
       border: 5px solid #2274A5;
@@ -162,7 +157,7 @@
       background-color: white;
 
     }
-/*768 to 480px*/
+  /* //940px-768px// */
 
     ul li {
       box-shadow: 2px 4px;
@@ -170,7 +165,7 @@
     }
 
     .number {
-      width: 94%;
+      width: 100%;
       text-align: center;
       margin-top: 0;
       font-family: 'Source Code Pro', monospace;
@@ -195,7 +190,7 @@
 
     }
 
-/* <!--768 to 480--> */
+    /* 940px-768px  */
 
     .box {
       display: block;
@@ -219,14 +214,11 @@
     footer div {
         margin-top: 20px;
     }
-}
+    }
 
 
-
-
-  /* 480px and smaller - smartphones and down */
-  @media (max-width: 480px) {
-
+    /* 768px - 480px landscape phones and small tablets*/
+    @media (max-width: 768px) {
 
       body {
         background-color: #E9F1F7;
@@ -269,7 +261,7 @@
         background-color: white;
 
       }
-/*480px on down */
+  /*768 to 480px*/
 
       ul li {
         box-shadow: 2px 4px;
@@ -277,7 +269,7 @@
       }
 
       .number {
-        width: 94%;
+        width: 100%;
         text-align: center;
         margin-top: 0;
         font-family: 'Source Code Pro', monospace;
@@ -302,7 +294,7 @@
 
       }
 
-/* <!--480px and down--> */
+  /* <!--768 to 480--> */
 
       .box {
         display: block;
@@ -322,4 +314,109 @@
 
 
       }
+
+      footer div {
+          margin-top: 20px;
+      }
   }
+
+
+
+
+    /* 480px and smaller - smartphones and down */
+    @media (max-width: 480px) {
+
+
+        body {
+          background-color: #E9F1F7;
+          border: 5px solid #2274A5;
+        }
+
+        header {
+          width: 100%;
+          margin: 0 auto;
+
+
+        }
+
+        h1 {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 2em;
+            margin-top: 50px;
+            letter-spacing: 1px;
+        }
+
+          ul, p {
+            width: 100%;
+          }
+
+            ul {
+                text-transform: uppercase;
+                padding-left: 0;
+
+            }
+
+        .number, ul li {
+          list-style-type: none;
+          margin: 15px 0 15px 0;
+          border: 3px solid #2274A5;
+          padding: 5px;
+          min-height: 50px;
+          line-height: 50px;
+          font-size: 0.8em;
+          font-weight: bold;
+          background-color: white;
+
+        }
+  /*480px on down */
+
+        ul li {
+          box-shadow: 2px 4px;
+          cursor: pointer;
+        }
+
+        .number {
+          width: 100%;
+          text-align: center;
+          margin-top: 0;
+          font-family: 'Source Code Pro', monospace;
+          text-transform: uppercase;
+        }
+
+
+        .heading {
+          width: 95%;
+          margin: 0 auto;
+          text-align: center;
+
+        }
+
+        .timer {
+          font-size: 5em;
+          width: 50%;
+          margin: 0 auto;
+          margin-bottom: 50px;
+          text-align: center;
+          font-family: 'Source Code Pro', monospace;
+
+        }
+
+  /* <!--480px and down--> */
+
+        .box {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          font-family: 'Source Code Pro', monospace;
+        }
+
+        .box p {
+          display:none;
+        }
+
+        .wrapper {
+          border: 0px;
+
+
+        }
+    }
