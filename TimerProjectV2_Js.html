@@ -52,34 +52,45 @@
 
   $(function() {
 
+      //   var timez = function() {
+      //
+      //     if (integer === 5) {
+      //       $('h1').text('5 seconds left!');
+      //     }
+      //
+      //     if (integer === 0) {
+      //       $('h1').text('Break time over!').css('color', '#CC4BC2');
+      //       $('.timer').css('color', '#CC4BC2');
+      //
+      //   }
+      // }
+      //
+      //   var endClock =
+      //
+      //     setTimeout(function() {
+      //        $('h1').text('Pause to breathe!').css('color', 'black');
+      //        $('.timer').html(" ").css('color', 'black');
+      //    },5000);
+
+
+
 
           $('#coffee').on('click', function() {
 
-                var timeCoffee = 15;
-                $('.timer').html(timeCoffee);
+                var integer = 15;
+                $('.timer').html(integer);
 
                 var clockCoffee = window.setInterval(function() {
 
-                       timeCoffee = timeCoffee - 1;
+                       integer = integer - 1;
 
-                  $('.timer').html(timeCoffee);
+                  $('.timer').html(integer);
 
+                   timez();
 
-
-                 if (timeCoffee === 5) {
-                   $('h1').text('5 seconds left!');
-                 }
-
-                 if (timeCoffee === 0) {
-                   $('h1').text('Break time over!').css('color', '#CC4BC2');
-                   $('.timer').css('color', '#CC4BC2');
+                   endClock();
                    window.clearInterval(clockCoffee);
 
-                   setTimeout(function() {
-                      $('h1').text('Pause to breathe!').css('color', 'black');
-                      $('.timer').html(" ").css('color', 'black');
-                  },5000);
-                 }
 
                }, 1000);
 
@@ -109,14 +120,21 @@
                    $('.timer').css('color', '#CC4BC2');
                    window.clearInterval(clockLunch);
 
-                   setTimeout(function() {
-                      $('h1').text('Pause to breathe!').css('color', 'black');
-                      $('.timer').html(" ").css('color', 'black');
-                  },5000);
 
-                 }
 
-               }, 1000);
+              setTimeout(function() {
+                 $('h1').text('Pause to breathe!').css('color', 'black');
+                 $('.timer').html(" ").css('color', 'black');
+             },5000);
+             }
+
+         }, 1000);
+
+
+
+
+
+
           });
 
 
